@@ -23,7 +23,7 @@ const Login = () => {
     const data = { username, password };
     try {
       const response = await login(data);
-
+      console.log(response);
       if (response.status === 200 && response.statusText === "OK") {
         setUser(response.data.user);
         navigate("/home", { state: { message: response.data.message } });
