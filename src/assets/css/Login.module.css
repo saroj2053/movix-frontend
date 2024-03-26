@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   background: linear-gradient(to bottom, #152c4dcc, #db2778df);
+  overflow-x: hidden;
 }
 
 .logo__container {
