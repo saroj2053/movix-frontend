@@ -26,7 +26,7 @@ const Login = () => {
       console.log(response);
       if (response.status === 200 && response.statusText === "OK") {
         setUser(response.data.user);
-        navigate("/home", { state: { message: response.data.message } });
+        return navigate("/home", { state: { message: response.data.message } });
       } else if (
         response.response.status === 400 &&
         response.response.statusText === "Bad Request"
