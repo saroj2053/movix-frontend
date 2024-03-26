@@ -1,0 +1,47 @@
+.landing {
+  background-color: #121212;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing__contents {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #302e4d;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.landing__appLogo {
+  padding-right: 40px;
+}
+
+.landing__appLogo>img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.landing__desc>h1 {
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .landing__contents {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background: #302e4d;
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+
+}

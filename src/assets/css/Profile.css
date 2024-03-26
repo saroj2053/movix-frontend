@@ -1,0 +1,34 @@
+.profile {
+  background-color: #121212;
+  color: #fff;
+  padding-top: 200px;
+  min-height: 100vh;
+}
+
+.profile__contents {
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #222;
+  padding: 2rem;
+}
+
+.profile__username {
+  background: #58646b;
+  padding: 1rem;
+}
+
+.profile__signOut-button {
+  width: 200px;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: linear-gradient(to right, #f38c10ff 30%, #db2778df 70%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
