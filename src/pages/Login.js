@@ -23,13 +23,12 @@ const Login = () => {
     const data = { username, password };
     try {
       const response = await login(data);
-      console.log(response);
       if (response.status === 200 && response.statusText === "OK") {
         setUser(response.data.user);
-        return navigate("/home", { state: { message: response.data.message } });
+        navigate("/home");
       } else if (
-        response.response.status === 400 &&
-        response.response.statusText === "Bad Request"
+        response.code === "ERR_BAD_REQUEST" &&
+        response.response.status === 400
       ) {
         return toast.error(response.response.data.message);
       } else {
