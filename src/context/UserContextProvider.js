@@ -3,10 +3,15 @@ import UserContext from "./UserContext";
 
 const UserContextProvider = ({ children }) => {
   const [user, setUser] = React.useState(() => {
-    const userData = localStorage.getItem("user");
-    if (userData) {
-      return JSON.parse(userData);
-    } else {
+    try {
+      const userData = localStorage.getItem("user");
+      if (userData) {
+        return JSON.parse(userData);
+      } else {
+        return { user: null, token: "" };
+      }
+    } catch (error) {
+      console.error("Error parsing user data:", error);
       return { user: null, token: "" };
     }
   });
