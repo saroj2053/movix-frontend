@@ -29,11 +29,12 @@ const Register = () => {
     try {
       const response = await register(data);
 
-      if (response.status === 201 && response.statusText === "Created") {
-        return toast.success(response.data.message);
+      if (response.status === 201) {
+        setUser(response.data.user);
+        navigate("/home");
       } else if (
-        response.response.status === 400 &&
-        response.response.statusText === "Bad Request"
+        response.code === "ERR_BAD_REQUEST" &&
+        response.response.status === 400
       ) {
         return toast.error(response.response.data.message);
       } else {
