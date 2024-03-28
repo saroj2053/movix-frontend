@@ -5,8 +5,10 @@ const UserContextProvider = ({ children }) => {
   const [user, setUser] = React.useState(() => {
     try {
       const userData = localStorage.getItem("user");
-      if (userData) {
-        return JSON.parse(userData);
+      const token = localStorage.getItem("token");
+      if (userData && token) {
+        const user = JSON.parse(userData);
+        return { user, token };
       } else {
         return { user: null, token: "" };
       }

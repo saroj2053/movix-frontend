@@ -11,7 +11,6 @@ function Navbar() {
 
   const { user } = useContext(UserContext);
   console.log(user);
-
   const navigate = useNavigate();
 
   useEffect(() => {

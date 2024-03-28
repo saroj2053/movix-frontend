@@ -15,7 +15,8 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const { setUser } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
+  console.log(user);
 
   const navigate = useNavigate();
 
@@ -34,7 +35,8 @@ const Register = () => {
       const response = await register(data);
 
       if (response.status === 201) {
-        setUser(response.data.newUser);
+        const { newUser, token } = response.data;
+        setUser({ user: newUser, token });
         navigate("/home");
       } else if (
         response.code === "ERR_BAD_REQUEST" &&

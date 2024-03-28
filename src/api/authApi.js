@@ -23,6 +23,7 @@ export const register = async data => {
   let response;
   try {
     response = await api.post("/user/register", data);
+    console.log(response.data.user);
     storeUserInLocalStorage(response.data);
   } catch (error) {
     return error;

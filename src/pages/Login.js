@@ -24,7 +24,8 @@ const Login = () => {
     try {
       const response = await login(data);
       if (response.status === 200) {
-        setUser(response.data.user);
+        const { user, token } = response.data;
+        setUser({ user, token });
         navigate("/home");
       } else if (
         response.code === "ERR_BAD_REQUEST" &&

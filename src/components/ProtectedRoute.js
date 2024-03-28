@@ -5,7 +5,9 @@ import UserContext from "../context/UserContext";
 function ProtectedRoute({ children }) {
   const { user } = React.useContext(UserContext);
 
-  if (!user.username) {
+  console.log(user);
+
+  if (user.token === "") {
     return <Navigate to="/login" />;
   } else {
     return children;

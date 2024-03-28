@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import MovieRow from "../components/MovieRow";
 import Header from "../components/Header";
 import api from "../api";
 import "../assets/css/Home.css";
+import UserContext from "../context/UserContext";
 
 const Home = () => {
+  const { user } = useContext(UserContext);
+  console.log(user);
   return (
     <div className="home">
       <Header />
