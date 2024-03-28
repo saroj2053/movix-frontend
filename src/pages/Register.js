@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "../assets/css/Register.module.css";
 
 import appLogo from "../assets/images/movix-logo.png";
 
 import { toast, Toaster } from "react-hot-toast";
 import { register } from "../api/authApi";
+import UserContext from "../context/UserContext";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,6 +15,9 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const { setUser } = useContext(UserContext);
+
+  const navigate = useNavigate();
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -30,7 +34,7 @@ const Register = () => {
       const response = await register(data);
 
       if (response.status === 201) {
-        setUser(response.data.user);
+        setUser(response.data.newUser);
         navigate("/home");
       } else if (
         response.code === "ERR_BAD_REQUEST" &&
