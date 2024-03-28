@@ -28,7 +28,7 @@ const Register = () => {
     const data = { username, password, confirmPassword };
     try {
       const response = await register(data);
-      console.log(response);
+
       if (response.status === 201 && response.statusText === "Created") {
         return toast.success(response.data.message);
       } else if (

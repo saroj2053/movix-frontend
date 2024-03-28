@@ -39,7 +39,11 @@ function Navbar() {
     <div className={`navbar ${bgShow && "navbar__dark"}`}>
       <div className="navbar__left">
         <img
-          onClick={() => navigate("/")}
+          onClick={() => {
+            user.user !== null && user.token !== ""
+              ? navigate("/home")
+              : navigate("/");
+          }}
           className="navbar__logo"
           src={navbarBrandImageSrc}
           alt="Navbar brand"
