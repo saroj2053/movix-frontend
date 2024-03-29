@@ -23,12 +23,10 @@
 .movie__posters::-webkit-scrollbar-thumb:horizontal {
     width: 10%;
     height: 3px;
+    cursor: pointer;
     background-color: #212020;
     -webkit-border-radius: 3px;
 }
-
-
-
 
 .movie__poster {
     object-fit: contain;

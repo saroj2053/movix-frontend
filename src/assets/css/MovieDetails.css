@@ -9,18 +9,20 @@
   max-width: 80%;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   background: #222;
   padding: 2rem;
 }
 
-.movieWrapper {
-  flex: 0.35;
+
+.movieWrapper .movie__front {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
 }
 
-.movieSectionArea {
-  flex: 0.6;
-}
+
 
 .movieDetails__movieImage {
   width: 100%;
@@ -34,13 +36,62 @@
 }
 
 .movieOverview {
+  width: 80%;
   text-align: justify;
   font-size: 0.75rem;
   line-height: 1.5;
   margin: 1rem 0;
 }
 
-.small {
+.movie__stats {
+  margin-top: 20px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie__stat:nth-of-type(2n) {
+  background: #db2778df;
+  margin: 1.5rem 0;
+  padding: 0.875rem 3rem;
+  border-radius: 10px;
+}
+
+.movie__stat:nth-of-type(2n-1) {
+  background: #f38c10ff;
+  margin: 1.5rem 0;
+  padding: 0.875rem 3rem;
+  border-radius: 10px;
+}
+
+.movie__stat h4,
+.movie__stat p {
   font-size: 0.875rem;
-  padding: 1rem 0;
+}
+
+.movie__stat p {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.movieDetails__bottom {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.wishlistBtn {
+  width: 30%;
+  margin: 0 auto;
+  padding: 0.75rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: linear-gradient(to right, #f38c10ff 30%, #db2778df 70%);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
 }

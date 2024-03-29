@@ -38,26 +38,47 @@ const MovieDetails = () => {
   return (
     <div className="movieDetails">
       <div className="movieDetails__contents">
-        <div className="movieWrapper">
-          {movie ? (
-            <div key={movie.id}>
-              <img
-                className="movieDetails__movieImage"
-                src={`${base_imageUrl}${movieImage}`}
-                alt={movie.title}
-              />
-              <h2 className="movieName">{movieName}</h2>
-              <p className="movieOverview">{movie.overview}</p>
-              <p className="small">Release Date: {movieReleaseDate}</p>
-              <p className="small">Rating: {movie.vote_average}</p>
-              <p className="small">Language: {movie.original_language}</p>
-            </div>
-          ) : (
-            <p>No movie data available</p>
-          )}
+        <div className="movieDetails__top">
+          <div className="movieWrapper">
+            {movie ? (
+              <div key={movie.id} className="movie__front">
+                <div className="movie__front-left">
+                  <img
+                    className="movieDetails__movieImage"
+                    src={`${base_imageUrl}${movieImage}`}
+                    alt={movie.title}
+                  />
+                </div>
+                <div className="movie__front-right">
+                  <h2 className="movieName">{movieName}</h2>
+                  <p className="movieOverview">{movie.overview}</p>
+                  <div className="movie__stats">
+                    <div className="movie__stat">
+                      <h4>Release Date</h4>
+                      <p>{movieReleaseDate}</p>
+                    </div>
+                    <div className="movie__stat">
+                      <h4>Rating</h4>
+                      <p>{movie.vote_average}</p>
+                    </div>
+                    <div className="movie__stat">
+                      <h4>Language</h4>
+                      <p>{movie.original_language}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <p>No movie data available</p>
+            )}
+          </div>
         </div>
-        <div className="movieSectionArea">
-          <Youtube videoId={trailerUrl} opts={opts} />
+
+        <div className="movieDetails__bottom">
+          <div className="movieSectionArea">
+            <Youtube videoId={trailerUrl} opts={opts} />
+          </div>
+          <button className="wishlistBtn">Add to Wishlist</button>
         </div>
       </div>
     </div>

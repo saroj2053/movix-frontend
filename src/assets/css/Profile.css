@@ -5,19 +5,53 @@
   min-height: 100vh;
 }
 
+.profile__heading {
+  max-width: 50%;
+  margin: 0 auto;
+  border-bottom: 2px solid #222;
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+  padding-bottom: 0.5rem;
+}
+
 .profile__contents {
   max-width: 50%;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
   background: #222;
   padding: 2rem;
 }
 
+
+.profile__right p {
+  margin-bottom: 2rem;
+}
+
+.profile__avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.profile__avatar>img {
+  width: inherit;
+  height: inherit;
+}
+
+
 .profile__username {
   background: #58646b;
   padding: 1rem;
+  font-weight: 700;
+}
+
+.user-registered-date {
+  background: #db2778;
+  margin-left: 15px;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999rem;
+  font-size: 0.875rem;
+  font-weight: 700;
 }
 
 .profile__signOut-button {

@@ -12,6 +12,8 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const [logging, setLogging] = useState(false);
+
   const navigate = useNavigate();
 
   const { user, setUser } = useContext(UserContext);
@@ -24,6 +26,7 @@ const Login = () => {
     try {
       const response = await login(data);
       if (response.status === 200) {
+        setLogging(true);
         const { user, token } = response.data;
         setUser({ user, token });
         navigate("/home");
@@ -101,7 +104,7 @@ const Login = () => {
             type="submit"
             onClick={handleFormSubmit}
           >
-            Login
+            {logging ? "Logging you in..." : "Login"}
           </button>
           <div className={styles.ctaRegister}>
             <p>

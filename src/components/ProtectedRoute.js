@@ -7,7 +7,7 @@ function ProtectedRoute({ children }) {
 
   console.log(user);
 
-  if (user.token === "") {
+  if (user.token === "" && !user.user.username) {
     return <Navigate to="/login" />;
   } else {
     return children;
