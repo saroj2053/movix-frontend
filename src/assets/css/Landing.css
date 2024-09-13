@@ -26,6 +26,12 @@
   align-items: center;
 }
 
+.landing__bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .landing__bottom > button {
   position: fixed;
   bottom: 2rem;
@@ -44,23 +50,31 @@
 }
 
 .landing__appLogo > img {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
 }
 
 .landing__desc > h1 {
-  font-size: 2.5rem;
+  font-size: calc(32px + 0.8vw);
   margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 900px) {
+  .landing__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
   .landing__contents {
     max-width: 90%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background: #302e4d;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
     border-radius: 1rem;
   }
