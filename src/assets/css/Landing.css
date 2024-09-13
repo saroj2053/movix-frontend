@@ -1,35 +1,57 @@
 .landing {
-  background-color: #121212;
+  background-color: black;
   color: #fff;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  filter: blur(0.75px);
 }
 
 .landing__contents {
   max-width: 80%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background: #302e4d;
-  padding: 2rem;
+  /* background: #302e4d; */
+  padding: 1rem;
   border-radius: 1rem;
+}
+
+.landing__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing__bottom > button {
+  position: fixed;
+  bottom: 2rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  border-radius: 999rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, #f38c10ff 30%, #db2778df 70%);
 }
 
 .landing__appLogo {
   padding-right: 40px;
 }
 
-.landing__appLogo>img {
-  width: 200px;
-  height: 200px;
+.landing__appLogo > img {
+  width: 180px;
+  height: 180px;
   object-fit: contain;
 }
 
-.landing__desc>h1 {
-  margin-bottom: 2rem;
+.landing__desc > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -42,6 +64,4 @@
     padding: 2rem;
     border-radius: 1rem;
   }
-
-
 }

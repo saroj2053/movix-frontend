@@ -7,40 +7,15 @@
   overflow-x: hidden;
 }
 
-.logo__container {
-  width: 250px;
-  height: 500px;
-  background: #121212;
-  padding: 1rem;
-  /* border-right: 2px solid lightgray; */
-  border-top-left-radius: 0.95rem;
-  border-bottom-left-radius: 0.95rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-
 .login__wrapper {
-  width: 500px;
-  height: 500px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #121212;
+  opacity: 0.9;
   color: #fff;
-  border-top-right-radius: 0.95rem;
-  border-bottom-right-radius: 0.95rem;
-}
-
-.login__brandLogo {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+  border-radius: 0.25rem;
 }
 
 .form__heading {
@@ -83,9 +58,8 @@
   transition: 0.5s;
 }
 
-
-.login__inputWrapper .login__input:valid~label,
-.login__inputWrapper .login__input:focus~label {
+.login__inputWrapper .login__input:valid ~ label,
+.login__inputWrapper .login__input:focus ~ label {
   color: #fff;
   transform: translateX(0) translateY(-34px);
   font-size: 12px;
@@ -118,9 +92,8 @@
   pointer-events: none;
 }
 
-
-.login__inputWrapper .login__input:valid~.line,
-.login__inputWrapper .login__input:focus~.line {
+.login__inputWrapper .login__input:valid ~ .line,
+.login__inputWrapper .login__input:focus ~ .line {
   height: 44px;
 }
 
@@ -180,13 +153,13 @@
   height: 44px;
   border: none;
   outline: none;
-  margin-top: 20px;
   background: #db2777;
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 .login__button:active {
@@ -215,7 +188,6 @@
 }
 
 @media screen and (max-width: 640px) {
-
   .logo__container {
     display: none;
   }

@@ -1,43 +1,42 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    height: 60px;
-    padding: 20px;
-    transition: all 0.4s ease-in;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  height: 60px;
+  padding: 20px;
+  transition: all 0.4s ease-in;
 }
 
 .navbar__dark {
-    background: rgb(17, 17, 17);
+  background: rgb(17, 17, 17);
 }
 
 .navbar__left .navbar__logo {
-    position: fixed;
-    left: 20px;
-    width: 90px;
-    object-fit: contain;
-    cursor: pointer;
-
+  position: fixed;
+  left: 20px;
+  width: 120px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .navbar__right .navbar__avatar {
-    position: fixed;
-    right: 20px;
-    width: 25px;
-    object-fit: contain;
-    cursor: pointer
+  position: fixed;
+  right: 20px;
+  width: 25px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .navbar__right .starterBtn {
-    position: fixed;
-    right: 20px;
-    object-fit: contain;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 0.75rem 1rem;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(to right, #f38c10ff 30%, #db2778df 70%);
+  position: fixed;
+  right: 20px;
+  object-fit: contain;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to right, #f38c10ff 30%, #db2778df 70%);
 }

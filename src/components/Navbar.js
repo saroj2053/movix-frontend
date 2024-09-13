@@ -26,10 +26,6 @@ function Navbar() {
     };
   }, []);
 
-  const handleBtnClick = () => {
-    navigate("/login");
-  };
-
   const handleAvatarClick = () => {
     navigate("/profile");
   };
@@ -50,17 +46,13 @@ function Navbar() {
       </div>
 
       <div className="navbar__right">
-        {user.user !== null && user.token !== "" ? (
+        {user.user !== null && user.token !== "" && (
           <img
             onClick={handleAvatarClick}
             className="navbar__avatar"
             src={navbarAvatarImageSrc}
             alt="Navbar avatar"
           />
-        ) : (
-          <button type="button" className="starterBtn" onClick={handleBtnClick}>
-            Get Started
-          </button>
         )}
       </div>
     </div>

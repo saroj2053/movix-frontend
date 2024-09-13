@@ -6,32 +6,15 @@
   background: linear-gradient(to bottom, #152c4dcc, #f38c10ff);
 }
 
-.logo__container {
-  width: 250px;
-  height: 500px;
-  background: #121212;
-  padding: 2rem;
-  /* border-right: 1px solid lightgray; */
-  border-top-left-radius: 0.95rem;
-  border-bottom-left-radius: 0.95rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .register__wrapper {
-  width: 500px;
-  height: 500px;
+  padding: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #121212;
-  border-top-right-radius: 0.95rem;
-  border-bottom-right-radius: 0.95rem;
+  border-radius: 0.25rem;
+  opacity: 0.9;
 }
-
-
 
 .form__heading {
   font-size: 2rem;
@@ -57,7 +40,6 @@
   outline: none;
   font-size: 1rem;
   font-weight: bold;
-  ;
   border-radius: 5px;
   letter-spacing: 0.8px;
   z-index: 4;
@@ -74,9 +56,8 @@
   transition: 0.5s;
 }
 
-.register__inputWrapper .register__input:valid~label,
-
-.register__inputWrapper .register__input:focus~label {
+.register__inputWrapper .register__input:valid ~ label,
+.register__inputWrapper .register__input:focus ~ label {
   color: #fff;
   transform: translateX(0) translateY(-34px);
   font-size: 12px;
@@ -109,10 +90,8 @@
   pointer-events: none;
 }
 
-
-.register__inputWrapper .register__input:valid~.line,
-
-.register__inputWrapper .register__input:focus~.line {
+.register__inputWrapper .register__input:valid ~ .line,
+.register__inputWrapper .register__input:focus ~ .line {
   height: 44px;
 }
 
@@ -172,13 +151,13 @@
   height: 44px;
   border: none;
   outline: none;
-  margin-top: 20px;
   background: #f38c10ff;
   color: #fff;
   font-size: 1rem;
   font-weight: 500;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 30px;
 }
 
 .register__button:active {
@@ -206,9 +185,7 @@
   text-decoration: underline;
 }
 
-
 @media screen and (max-width: 640px) {
-
   .logo__container {
     display: none;
   }

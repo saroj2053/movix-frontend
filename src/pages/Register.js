@@ -2,8 +2,6 @@ import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "../assets/css/Register.module.css";
 
-import appLogo from "../assets/images/movix-logo.png";
-
 import { toast, Toaster } from "react-hot-toast";
 import { register } from "../api/authApi";
 import UserContext from "../context/UserContext";
@@ -28,7 +26,7 @@ const Register = () => {
     setShowConfirmPassword(!showConfirmPassword);
   };
 
-  const handleFormSubmit = async evt => {
+  const handleFormSubmit = async (evt) => {
     evt.preventDefault();
     const data = { username, password, confirmPassword };
     try {
@@ -54,9 +52,7 @@ const Register = () => {
   return (
     <div className={styles.register}>
       <Toaster />
-      <div className={styles.logo__container}>
-        <img style={{ width: "180px" }} src={appLogo} alt="" />
-      </div>
+
       <div className={styles.register__wrapper}>
         <form action="" autoComplete="off" onSubmit={handleFormSubmit}>
           <h2 className={styles.form__heading}>Register</h2>
@@ -66,7 +62,7 @@ const Register = () => {
               type="text"
               value={username}
               id="email"
-              onChange={evt => setUsername(evt.target.value)}
+              onChange={(evt) => setUsername(evt.target.value)}
               required
             />
             <label>Username</label>
@@ -80,7 +76,7 @@ const Register = () => {
               className={styles.register__input}
               type={showPassword ? "text" : "password"}
               value={password}
-              onChange={evt => setPassword(evt.target.value)}
+              onChange={(evt) => setPassword(evt.target.value)}
               required
             />
             <label>Password</label>
@@ -96,7 +92,7 @@ const Register = () => {
               className={styles.register__input}
               value={confirmPassword}
               type={showConfirmPassword ? "text" : "password"}
-              onChange={evt => setConfirmPassword(evt.target.value)}
+              onChange={(evt) => setConfirmPassword(evt.target.value)}
               required
             />
             <label>Confirm Password</label>
@@ -112,12 +108,12 @@ const Register = () => {
             </span>
             <span className={styles.line}></span>
           </div>
-          <div className={styles.checkInput}>
+          {/* <div className={styles.checkInput}>
             <label>
               <input type="checkbox" />
               Remember me
             </label>
-          </div>
+          </div> */}
           <button
             className={styles.register__button}
             type="submit"

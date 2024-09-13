@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import styles from "../assets/css/Login.module.css";
 import { Link, useNavigate } from "react-router-dom";
-
-import appLogo from "../assets/images/movix-logo.png";
 import { login } from "../api/authApi";
 import { toast, Toaster } from "react-hot-toast";
 import UserContext from "../context/UserContext";
@@ -19,7 +17,7 @@ const Login = () => {
   const { user, setUser } = useContext(UserContext);
   console.log(user);
 
-  const handleFormSubmit = async evt => {
+  const handleFormSubmit = async (evt) => {
     evt.preventDefault();
 
     const data = { username, password };
@@ -50,11 +48,6 @@ const Login = () => {
   return (
     <div className={styles.login}>
       <Toaster />
-      <div className={styles.login__section}></div>
-
-      <div className={styles.logo__container}>
-        <img style={{ width: "180px" }} src={appLogo} alt="" />
-      </div>
       <div className={styles.login__wrapper}>
         <form action="" autoComplete="off" onSubmit={handleFormSubmit}>
           <h2 className={styles.form__heading}>Login</h2>
@@ -64,7 +57,7 @@ const Login = () => {
               type="text"
               id="username"
               value={username}
-              onChange={evt => setUsername(evt.target.value)}
+              onChange={(evt) => setUsername(evt.target.value)}
               required
             />
             <label>Username</label>
@@ -78,7 +71,7 @@ const Login = () => {
               className={styles.login__input}
               value={password}
               type={showPassword ? "text" : "password"}
-              onChange={evt => setPassword(evt.target.value)}
+              onChange={(evt) => setPassword(evt.target.value)}
               required
             />
             <label>Password</label>
@@ -90,7 +83,7 @@ const Login = () => {
             <span className={styles.line}></span>
           </div>
 
-          <div className={styles.checkInput}>
+          {/* <div className={styles.checkInput}>
             <label>
               <input type="checkbox" />
               Remember me
@@ -98,7 +91,7 @@ const Login = () => {
             <Link className={styles.link} to="#">
               Forgot Password ?
             </Link>
-          </div>
+          </div> */}
           <button
             className={styles.login__button}
             type="submit"
